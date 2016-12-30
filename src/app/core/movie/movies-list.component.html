@@ -1,0 +1,36 @@
+<header class="text-center">
+    <h1>{{pageTitle}}</h1>
+</header>
+
+<section class="container">
+    <div class="well text-center">
+        <filter-movies-list-component (onFilterTextChange)="onFilterTextChange($event)"></filter-movies-list-component>
+    </div>
+</section>
+
+<section class="container">
+    <div class="well">
+        <sort-order-movies-component (onUpdateOrder)="onUpdateOrder($event)" (onUpdateSortBy)="onUpdateSortBy($event)"></sort-order-movies-component>
+    </div>
+</section>
+
+<section class="container">
+    <ul class="list-group text-center">
+        <li class="row list-group-item">
+            <div class="col-xs-3">
+                <p>Image</p>
+            </div>
+            <div class="col-xs-3">
+                <p>Title</p>
+            </div>
+            <div class="col-xs-3">
+                <p>Year</p>
+            </div>
+            <div class="col-xs-3">
+                <p>IMDB Rating</p>
+            </div>
+        </li>
+        <li class="row list-group-item" mvdb-movie-short *ngFor="let movie of (movies | filter: filterByText | sort: [sortByPropertyName, sortOrder])"
+            [movie]="movie"></li>
+    </ul>
+</section>

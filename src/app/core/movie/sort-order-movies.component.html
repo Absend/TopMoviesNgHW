@@ -1,0 +1,26 @@
+<div class="row">
+    <div class="dropdown col-xs-3 col-xs-offset-2">
+        <button class="btn btn-default dropdown-toggle col-xs-12" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true"
+            aria-expanded="true">
+    {{sortBy}}
+    <span class="caret"></span>
+  </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+            <li (click)="updateSortBy('Title')"><a>Title</a></li>
+            <li (click)="updateSortBy('Year')"><a>Year</a></li>
+            <li (click)="updateSortBy('IMDB Rating')"><a>IMDB Rating</a></li>
+        </ul>
+    </div>
+
+    <div class="dropdown col-xs-3 col-xs-offset-2">
+        <button class="btn btn-default dropdown-toggle col-xs-12" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true"
+            aria-expanded="true">
+    {{order}}
+    <span class="caret"></span>
+  </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+            <li (click)="updateOrder('Ascending')"><a>Ascending</a></li>
+            <li (click)="updateOrder('Descending')"><a>Descending</a></li>
+        </ul>
+    </div>
+</div>
