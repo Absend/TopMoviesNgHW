@@ -4,7 +4,8 @@ import { MoviesService } from './../services/movies.service';
 
 @Component({
     selector: 'movies-list',
-    templateUrl: './movies-list.component.html'
+    templateUrl: './movies-list.component.html',
+    styleUrls: ['./movies-list.component.css']
 })
 export class MoviesListComponent {
     pageTitle: string;

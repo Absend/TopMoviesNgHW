@@ -6,16 +6,19 @@ import { OmdbSearch } from './../models/omdb-search.model';
 @Component({
   selector: 'app-omdb-api-search',
   templateUrl: './omdb-api-search.component.html',
-  styles: []
+  styleUrls: ['./omdb-api-search.component.css']
 })
 export class OmdbApiSearchComponent {
   private searchResult: OmdbSearch;
   private searchTitle: string;
+  private pageTitle: string;
   private previousSearchTitle: string;
   private pageNumber: number;
   private hasPagination: boolean;
 
   constructor(private omdbService: OmdbApiService) {
+
+    this.pageTitle = 'OMDB SEARCH MOVIES';
 
     // api pages start at 1
     this.pageNumber = 1;

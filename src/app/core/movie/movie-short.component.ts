@@ -4,7 +4,8 @@ import { Movie } from './../models/movie.model';
 
 @Component({
     selector: '[mvdb-movie-short]',
-    templateUrl: './movie-short.component.html'
+    templateUrl: './movie-short.component.html',
+    styleUrls: ['./movie-short.component.css']
 })
 export class MovieShortComponent {
     @Input()

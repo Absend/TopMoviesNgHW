@@ -6,7 +6,7 @@ import 'rxjs/add/operator/map';
 @Component({
   selector: 'app-omdb-api-details',
   templateUrl: './omdb-api-details.component.html',
-  styles: []
+  styleUrls: ['./omdb-api-details.component.css']
 })
 export class OmdbApiDetailsComponent implements OnInit {
   private movie: any;

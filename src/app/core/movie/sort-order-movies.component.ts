@@ -2,7 +2,8 @@ import { Component, Output, EventEmitter } from '@angular/core';
 
 @Component({
     selector: 'sort-order-movies-component',
-    templateUrl: './sort-order-movies.component.html'
+    templateUrl: './sort-order-movies.component.html',
+    styleUrls: ['./sort-order-movies.component.css']
 })
 export class SortOrderMoviesComponent {
     @Output() onUpdateSortBy: EventEmitter<string>;
